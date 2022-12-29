@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #ddd;
+}
+.header{
+    background-color: #7E5089;
+    height: 3vw;  
+}
+.logo ul{
+    margin-left: -2%;
+}
+.logo li{
+    display: inline-block;
+    width: 5%;
+    font-size: 1.3vw;
+    font-weight: bolder;
+    color: white;
+
+}
+.logo li .logo_img{
+    width: 50%;
+    margin-top: 5%;
+    margin-left: 40%;
+}
+.user{
+    margin-top: -3.5%;
+}
+.user p{
+    font-size: 1.3vw;
+    font-weight: bolder;
+    color: white;
+    text-align: right;
+    margin-right: 3%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sidebar{
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+.sidebar ul{
+    padding-top: 10%;
+}
+.sidebar li{
+    color: white;
+    text-indent: 1vw;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 115%;
+    margin-left: -15%;
+    font-size: 1.3vw;
+    margin-bottom: 5%;
+}
+.sidebar .dashboard{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 10%;
+}
+.sidebar li:hover{
+    background-color: #593363;
+}
+.sidebar .active{
+    background-color: #593363;
+}
+.sidebar{
+    width: 20%;
+    min-height: 43.7vw;
+    height: fit-content;
+    background-color: #7E5089;
+
+}
+
+@media only screen and (max-width: 900px) {
+    .header{
+        height: 10vw;
+    }
+    .logo li{
+        width: 10%;
+        font-size: 3vw;
+    }
+    .logo li .logo_img{
+        margin-left: 0%;
+        margin-top: 5%;
+        width: 90%;
+    }
+    .user{
+        margin-top: -9%;
+    }
+    .user p{
+        font-size: 3vw;
+    }
+    .sidebar{
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+        min-height: 0%;
+        height: 7%;
+    }
+    .sidebar ul{
+        margin-top: -7.3%;
+        margin-left: 15%;
+        
+    }
+    .sidebar label{
+        display: none;
+    }
+    .sidebar li{
+        padding: 4%;
+        margin-top: 0%;
+        margin-right:29%;
+        display: inline;
+        font-size: 3vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .header{
+        height: 10vw;
+    }
+    .logo li{
+        width: 10%;
+        font-size: 3vw;
+    }
+    .logo li .logo_img{
+        margin-left: 0%;
+        margin-top: 5%;
+        width: 90%;
+    }
+    .user{
+        margin-top: -10%;
+    }
+    .user p{
+        font-size: 3vw;
+    }
+    .sidebar{
+        position: fixed;
+        bottom: 0%;
+        width: 100%;
+        min-height: 0%;
+        height: 7%;
+    }
+    .sidebar ul{
+        margin-top: -7%;
+        margin-left: 5%;
+        
+    }
+    .sidebar label{
+        display: none;
+    }
+    .sidebar li{
+        padding: 5%;
+        margin-top: 0%;
+        margin-right:29%;
+        display: inline;
+        font-size: 3vw;
+    }
+  }
