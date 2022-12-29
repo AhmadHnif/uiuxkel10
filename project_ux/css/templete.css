@@ -7,7 +7,7 @@ body{
     background-color: #ddd;
 }
 .header{
-    background-color: #7E5089;
+    background-color: orangered;
     height: 3vw;  
 }
 .logo ul{
@@ -60,16 +60,16 @@ body{
     margin-bottom: 10%;
 }
 .sidebar li:hover{
-    background-color: #593363;
+    background-color: rgb(202, 54, 0);
 }
 .sidebar .active{
-    background-color: #593363;
+    background-color: rgb(202, 54, 0);
 }
 .sidebar{
     width: 20%;
     min-height: 43.7vw;
     height: fit-content;
-    background-color: #7E5089;
+    background-color: orangered;
 
 }
 
