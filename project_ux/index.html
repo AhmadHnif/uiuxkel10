@@ -46,22 +46,6 @@
             if(screen.width < 900){
                 document.querySelector('.sidebar').setAttribute('style', 'height: 7%')
             }
-            var status = document.querySelectorAll('.content .content_list .status');
-            var table = document.querySelectorAll('.content_list');
-            for(var i=0; i<status.length; i++){
-                var sisa_bagi = i%2;
-                if(sisa_bagi != 0){
-                    table[i].setAttribute('style', 'background-color: rgba(126, 80, 137, 0.4)')
-                }else{
-                    table[i].setAttribute('style', 'background-color: rgba(126, 80, 137, 0.2)')
-                }
-
-                if(status[i].innerHTML == "Selesai"){
-                    status[i].setAttribute('style', 'color:#048000; font-weight: bolder');
-                }else{
-                    status[i].setAttribute('style', 'color:#ff1e00');
-                }
-            }
         }, 1000);
     </script>
 </body>
