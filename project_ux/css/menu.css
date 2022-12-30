@@ -35,13 +35,13 @@
 
     .container .products-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    gap:2rem;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap:1rem;
     }
 
     .container .products-container .product{
     text-align: center;
-    padding:3rem 2rem;
+    padding:0.5rem 2rem;
     background: orangered;
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
     outline: .1rem solid black;
@@ -55,7 +55,8 @@
     }
 
     .container .products-container .product img{
-    height: 25rem;
+    margin-top: 1rem;
+    height: 12rem;
     }
 
     .container .products-container .product:hover img{
@@ -65,7 +66,7 @@
     .container .products-container .product h3{
     padding:.5rem 0;
     font-size: 2rem;
-    color:#444;
+    color: #fff;
     }
 
     .container .products-container .product:hover h3{
@@ -74,7 +75,8 @@
 
     .container .products-container .product .price{
     font-size: 2rem;
-    color:#444;
+    color: #fff;;
+    margin-bottom: 1rem;
     }
 
     .products-preview{
@@ -94,7 +96,7 @@
     text-align: center;
     background: orangered;
     position: relative;
-    margin:2rem;
+    margin:5rem;
     width: 40rem;
     }
 
@@ -103,14 +105,14 @@
     }
 
     .products-preview .preview img{
-    height: 30rem;
+    height: 10rem;
     }
 
     .products-preview .preview .fa-times{
     position: absolute;
     top:1rem; right:1.5rem;
     cursor: pointer;
-    color:#444;
+    color: #fff;;
     font-size: 4rem;
     }
 
@@ -119,7 +121,7 @@
     }
 
     .products-preview .preview h3{
-    color:#444;
+    color: #fff;;
     padding:.5rem 0;
     font-size: 2.5rem;
     }
@@ -130,24 +132,24 @@
     }
 
     .products-preview .preview .stars i{
-    color:#27ae60;
+    color: #fff;;
     }
 
     .products-preview .preview .stars span{
-    color:#999;
+    color: #fff;;
     }
 
     .products-preview .preview p{
     line-height: 1.5;
     padding:1rem 0;
     font-size: 1.6rem;
-    color:#777;
+    color: #fff;;
     }
 
     .products-preview .preview .price{
     padding:1rem 0;
     font-size: 2.5rem;
-    color:#444;
+    color: #fff;;
     }
 
     .products-preview .preview .buttons{
