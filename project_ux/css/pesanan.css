@@ -5,7 +5,7 @@
 #input_gambar p{
     width: 20%;
     height: 5vw;
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 2%;
     border: 1px solid black;
     text-align: center;
@@ -19,7 +19,17 @@
 }
 p{
     font-size: 16px;
+    margin-left: 2%;
 }
 #deskripsi{
     border-color: orangered;
+}
+#nama{
+    margin-left: 2%;
+}
+#harga{
+    margin-left: 2%;
+}
+#deskripsi{
+    margin-left: 2%;
 }
