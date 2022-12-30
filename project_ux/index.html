@@ -27,14 +27,14 @@
     </div>
     <div class="sidebar">
         <ul style="list-style: none;">
-            <li class="dashboard active"><i class="fa-solid fa-chart-area"></i></i>&ensp;&ensp;<label>Dashboard</label></li>
-            <li onclick=""><i class="fa-solid fa-cart-plus"></i></i>&ensp; <label>Pemesanan</label></li>
-            <li><i class="fa-solid fa-mug-hot"></i></i>&ensp;&ensp;<label>Tambah Menu</label></li>
+            <li class="dashboard active" onclick="dashboard()" id="dashboard"><i class="fa-solid fa-chart-area"></i></i>&ensp;&ensp;<label>Dashboard</label></li>
+            <li onclick="pesanan()" id="pemesanan"><i class="fa-solid fa-cart-plus"></i></i>&ensp; <label>Pemesanan</label></li>
+            <li onclick="tambahMenu()" id="tambah_menu"><i class="fa-solid fa-mug-hot"></i></i>&ensp;&ensp;<label>Tambah Menu</label></li>
         </ul>
     </div>
     <!-- Content -->
     <div class="content">
-       <iframe src="menu.html" frameborder="0"></iframe>
+       <iframe src="dashboard.html" frameborder="0" id="iframe"></iframe>
     </div>
 
     <script>
@@ -45,8 +45,27 @@
             }
             if(screen.width < 900){
                 document.querySelector('.sidebar').setAttribute('style', 'height: 7%')
+                document.getElementById('iframe').setAttribute('style', 'height: '+screen.height+'px;');
             }
         }, 1000);
+        function dashboard(){
+        document.getElementById('dashboard').setAttribute('class', 'dashboard active');
+        document.getElementById('pemesanan').setAttribute('class', '');
+        document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('iframe').setAttribute('src', 'dashboard.html');
+        }
+        function pesanan(){
+        document.getElementById('pemesanan').setAttribute('class', 'active');
+        document.getElementById('dashboard').setAttribute('class', 'dashboard');
+        document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('iframe').setAttribute('src', 'menu.html');
+        }
+        function tambahMenu(){
+        document.getElementById('dashboard').setAttribute('class', 'dashboard');
+        document.getElementById('pemesanan').setAttribute('class', '');
+        document.getElementById('tambah_menu').setAttribute('class', 'active');
+        document.getElementById('iframe').setAttribute('src', 'dashboard.html');
+        }
     </script>
 </body>
 </html>
