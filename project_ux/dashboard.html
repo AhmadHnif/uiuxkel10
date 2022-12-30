@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+        <link rel="stylesheet" href="css/dashboard.css">
+    </head>
+<body>
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+<script>
+var xValues = ["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","November","Desember"];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+      data: [500000,650000,460000,700000,500000,300000,440000,650000,430000,610000, 800000],
+      borderColor: "red",
+      fill: false
+    }, { 
+      data: [200000,150000,360000,500000,200000,300000,340000,550000,420000,410000, 1000000],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
+</script>

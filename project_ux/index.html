@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Admin</title>
+    <title>CBG Cafe</title>
+    <link rel="shortcut icon" href="img/Logo CBG Polos.ico">
     <link rel="stylesheet" href="css/templete.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="fontawesome-free-6.2.1-web/css/all.css">
@@ -27,14 +28,14 @@
     </div>
     <div class="sidebar">
         <ul style="list-style: none;">
-            <li class="dashboard active"><i class="fa-solid fa-chart-area"></i></i>&ensp;&ensp;<label>Dashboard</label></li>
-            <li><i class="fa-solid fa-cart-plus"></i></i>&ensp; <label>Pemesanan</label></li>
-            <li><i class="fa-solid fa-mug-hot"></i></i>&ensp;&ensp;<label>Tambah Menu</label></li>
+            <li class="dashboard active" onclick="dashboard()" id="dashboard"><i class="fa-solid fa-chart-area"></i></i>&ensp;&ensp;<label>Dashboard</label></li>
+            <li onclick="pesanan()" id="pemesanan"><i class="fa-solid fa-cart-plus"></i></i>&ensp; <label>Pemesanan</label></li>
+            <li onclick="tambahMenu()" id="tambah_menu"><i class="fa-solid fa-mug-hot"></i></i>&ensp;&ensp;<label>Tambah Menu</label></li>
         </ul>
     </div>
     <!-- Content -->
     <div class="content">
-       
+       <iframe src="dashboard.html" frameborder="0" id="iframe"></iframe>
     </div>
 
     <script>
@@ -45,24 +46,27 @@
             }
             if(screen.width < 900){
                 document.querySelector('.sidebar').setAttribute('style', 'height: 7%')
-            }
-            var status = document.querySelectorAll('.content .content_list .status');
-            var table = document.querySelectorAll('.content_list');
-            for(var i=0; i<status.length; i++){
-                var sisa_bagi = i%2;
-                if(sisa_bagi != 0){
-                    table[i].setAttribute('style', 'background-color: rgba(126, 80, 137, 0.4)')
-                }else{
-                    table[i].setAttribute('style', 'background-color: rgba(126, 80, 137, 0.2)')
-                }
-
-                if(status[i].innerHTML == "Selesai"){
-                    status[i].setAttribute('style', 'color:#048000; font-weight: bolder');
-                }else{
-                    status[i].setAttribute('style', 'color:#ff1e00');
-                }
+                document.getElementById('iframe').setAttribute('style', 'height: '+screen.height+'px;');
             }
         }, 1000);
+        function dashboard(){
+        document.getElementById('dashboard').setAttribute('class', 'dashboard active');
+        document.getElementById('pemesanan').setAttribute('class', '');
+        document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('iframe').setAttribute('src', 'dashboard.html');
+        }
+        function pesanan(){
+        document.getElementById('pemesanan').setAttribute('class', 'active');
+        document.getElementById('dashboard').setAttribute('class', 'dashboard');
+        document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('iframe').setAttribute('src', 'menu.html');
+        }
+        function tambahMenu(){
+        document.getElementById('dashboard').setAttribute('class', 'dashboard');
+        document.getElementById('pemesanan').setAttribute('class', '');
+        document.getElementById('tambah_menu').setAttribute('class', 'active');
+        document.getElementById('iframe').setAttribute('src', 'dashboard.html');
+        }
     </script>
 </body>
 </html>
