@@ -112,7 +112,7 @@
 
 </div>
 
-<a href="#" class="float">
+<a onclick="keranjangNow()" class="float">
    <i class="fa-solid fa-cart-shopping my-float"></i>
 </a>
 
@@ -359,6 +359,11 @@
    </div>
 
 </div>
-
+<script>
+   function keranjangNow(){
+      document.cookie = "src=keranjang.html";
+      window.location.href = "keranjang.html";
+   }
+</script>
 </body>
 </html>
