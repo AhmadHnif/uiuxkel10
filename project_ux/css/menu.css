@@ -43,6 +43,8 @@
         margin-top:20px;
     }
 
+    
+
     .container .title{
     font-size: 3.5rem;
     color:#444;
@@ -220,7 +222,7 @@
 
     }
 
-    @media (max-width:450px){
+    @media only screen and (max-width:450px){
 
     html{
         font-size: 50%;
