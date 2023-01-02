@@ -50,17 +50,18 @@
                 document.getElementById('iframe').setAttribute('style', 'height: '+screen.height+'px;');
             }
         }, 1000);
-        var iframe = document.getElementById('iframe').getAttribute("src");
-        if(iframe == "dashboard.html"){
+        var iframe = document.cookie;
+        var split = iframe.split("=");
+        if(split[1] == "dashboard.html"){
             dashboard();
         }
-        if(iframe == "menu.html"){
+        if(split[1] == "menu.html"){
             pesanan();
         }
-        if(iframe == "pesanan.html"){
+        if(split[1] == "pesanan.html"){
             tambahMenu();
         }
-        if(iframe == "keranjang.html"){
+        if(split[1] == "keranjang.html"){
             keranjang();
         }
         function dashboard(){
@@ -69,6 +70,7 @@
         document.getElementById('tambah_menu').setAttribute('class', '');
         document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'dashboard.html');
+        document.cookie = "src=dashboard.html";
         }
         function pesanan(){
         document.getElementById('pemesanan').setAttribute('class', 'active');
@@ -76,6 +78,7 @@
         document.getElementById('tambah_menu').setAttribute('class', '');
         document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'menu.html');
+        document.cookie = "src=menu.html";
         }
         function tambahMenu(){
         document.getElementById('dashboard').setAttribute('class', 'dashboard');
@@ -83,6 +86,7 @@
         document.getElementById('tambah_menu').setAttribute('class', 'active');
         document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'pesanan.html');
+        document.cookie = "src=pesanan.html";
         }
         function keranjang(){
         document.getElementById('dashboard').setAttribute('class', 'dashboard');
@@ -90,6 +94,7 @@
         document.getElementById('tambah_menu').setAttribute('class', '');
         document.getElementById('keranjang').setAttribute('class', 'active');
         document.getElementById('iframe').setAttribute('src', 'keranjang.html');
+        document.cookie = "src=keranjang.html";
         }
     </script>
 </body>
