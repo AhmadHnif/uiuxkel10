@@ -1,6 +1,7 @@
 *{
     padding: 0%;
     margin: 0%;
+    font-family: 'Nunito', sans-serif;
 }
 body{
     background-color: #eee;
@@ -12,8 +13,9 @@ body{
     height: fit-content;
     padding-bottom: 2%;
     margin-left: 25%;
-    margin-top: 4%;
+    margin-top: 1%;
     padding-top: 2%;
+    margin-bottom: 2%;
 }
 #input_gambar p{
     width: 80%;
@@ -32,7 +34,8 @@ body{
 }
 p{
     font-size: 16px;
-    margin-left: 2%;
+    margin-left: 8%;
+    margin-bottom: 2%;
 }
 #deskripsi{
     border-color: orangered;
@@ -75,4 +78,24 @@ p{
     border-radius: 0.7vw;
     color: white;
     font-weight: bolder;
+}
+@media only screen and (max-width: 900px) {
+    .content{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 5%;
+    }  
+    #nama{
+        height: 8vw;
+    }
+    #harga{
+        height: 8vw;
+    }
+    .submit{
+        height: 8vw;
+        font-size: 3vw;
+    } 
+    #input_gambar p{
+        height: 20vw;
+    }
 }
