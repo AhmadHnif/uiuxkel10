@@ -11,6 +11,7 @@
 
    <!-- custom js file link  -->
    <script src="js/script.js" defer></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
    <link rel="stylesheet" href="css/keranjang2.css">
 
@@ -35,11 +36,11 @@
       </div>
 
       <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
+        <button class="plus-btn" type="button" name="button" onclick="plus(0, 12)">
           <img src="img/plus.svg" alt="" />
         </button>
         <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
+        <button class="minus-btn" type="button" name="button" onclick="min(0, 12)">
           <img src="img/minus.svg" alt="" />
         </button>
       </div>
@@ -59,11 +60,11 @@
       </div>
 
       <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
+        <button class="plus-btn" type="button" name="button" onclick="plus(1, 7)">
           <img src="img/plus.svg" alt="" />
         </button>
         <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
+        <button class="minus-btn" type="button" name="button" onclick="min(1, 7)">
           <img src="img/minus.svg" alt="" />
         </button>
       </div>
@@ -72,7 +73,7 @@
     </div>
 
     <!-- Product #3 -->
-    <div class="item">
+    <div class="item" style="padding-bottom: 35%;">
       <div class="image">
         <img class="img-buy" src="img/miekuah.png" alt="" />
       </div>
@@ -83,19 +84,76 @@
       </div>
 
       <div class="quantity">
-        <button class="plus-btn" type="button" name="button">
+        <button class="plus-btn" type="button" name="button" onclick="plus(2, 6)">
           <img src="img/plus.svg" alt="" />
         </button>
         <input type="text" name="name" value="1">
-        <button class="minus-btn" type="button" name="button">
+        <button class="minus-btn" type="button" name="button" onclick="min(2, 6)">
           <img src="img/minus.svg" alt="" />
         </button>
       </div>
 
-      <div class="total-price">Rp. 6.000</div>
+      <div class="total-price">Rp.6.000</div>
     </div>
+    <script>
+      $('.minus-btn').on('click', function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          var $input = $this.closest('div').find('input');
+          var value = parseInt($input.val());
 
+          if (value > 1) {
+            value = value - 1;
+          } else {
+            value = 0;
+          }
 
-  
+          $input.val(value);
+
+        });
+
+        $('.plus-btn').on('click', function(e) {
+          e.preventDefault();
+          var $this = $(this);
+          var $input = $this.closest('div').find('input');
+          var value = parseInt($input.val());
+
+          if (value < 100) {
+            value = value + 1;
+          } else {
+            value =100;
+          }
+
+          $input.val(value);
+        });
+
+        $('.like-btn').on('click', function() {
+          $(this).toggleClass('is-active');
+        });
+        var totalAwal = [12, 7, 6];
+      function plus (id, hargaSatuan) {
+        totalAwal[id] = totalAwal[id] + hargaSatuan;
+        var price = document.querySelectorAll('.total-price');
+        price[id].innerHTML = "Rp."+totalAwal[id]+".000";
+        var btn_min = document.querySelectorAll('.minus-btn');
+        console.log(totalAwal);
+        if(totalAwal[id] < 1){
+          btn_min[id].setAttribute("disabled", "")
+        }else{
+          btn_min[id].removeAttribute("disabled");
+        }
+      }
+      function min (id, hargaSatuan) {
+        totalAwal[id] = totalAwal[id] - hargaSatuan;
+        var price = document.querySelectorAll('.total-price');
+        price[id].innerHTML = "Rp."+totalAwal[id]+".000";
+        var btn_min = document.querySelectorAll('.minus-btn');
+        if(totalAwal[id] < 1){
+          btn_min[id].setAttribute("disabled", "")
+        }else{
+          btn_min[id].removeAttribute("disabled");
+        }
+      }
+    </script>
 </body>
 </html>
