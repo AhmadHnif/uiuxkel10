@@ -30,6 +30,7 @@
         <ul style="list-style: none;">
             <li class="dashboard active" onclick="dashboard()" id="dashboard"><i class="fa-solid fa-chart-area"></i></i>&ensp;&ensp;<label>Dashboard</label></li>
             <li onclick="pesanan()" id="pemesanan"><i class="fa-solid fa-cart-plus"></i></i>&ensp; <label>Pemesanan</label></li>
+            <li onclick="keranjang()" id="keranjang"><i class="fa-solid fa-cart-shopping"></i></i></i>&ensp;&ensp;<label>Keranjang</label></li>
             <li onclick="tambahMenu()" id="tambah_menu"><i class="fa-solid fa-mug-hot"></i></i>&ensp;&ensp;<label>Tambah Menu</label></li>
         </ul>
     </div>
@@ -53,19 +54,29 @@
         document.getElementById('dashboard').setAttribute('class', 'dashboard active');
         document.getElementById('pemesanan').setAttribute('class', '');
         document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'dashboard.html');
         }
         function pesanan(){
         document.getElementById('pemesanan').setAttribute('class', 'active');
         document.getElementById('dashboard').setAttribute('class', 'dashboard');
         document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'menu.html');
         }
         function tambahMenu(){
         document.getElementById('dashboard').setAttribute('class', 'dashboard');
         document.getElementById('pemesanan').setAttribute('class', '');
         document.getElementById('tambah_menu').setAttribute('class', 'active');
+        document.getElementById('keranjang').setAttribute('class', '');
         document.getElementById('iframe').setAttribute('src', 'pesanan.html');
+        }
+        function keranjang(){
+        document.getElementById('dashboard').setAttribute('class', 'dashboard');
+        document.getElementById('pemesanan').setAttribute('class', '');
+        document.getElementById('tambah_menu').setAttribute('class', '');
+        document.getElementById('keranjang').setAttribute('class', 'active');
+        document.getElementById('iframe').setAttribute('src', 'keranjang.html');
         }
     </script>
 </body>
