@@ -50,6 +50,19 @@
                 document.getElementById('iframe').setAttribute('style', 'height: '+screen.height+'px;');
             }
         }, 1000);
+        var iframe = document.getElementById('iframe').getAttribute("src");
+        if(iframe == "dashboard.html"){
+            dashboard();
+        }
+        if(iframe == "menu.html"){
+            pesanan();
+        }
+        if(iframe == "pesanan.html"){
+            tambahMenu();
+        }
+        if(iframe == "keranjang.html"){
+            keranjang();
+        }
         function dashboard(){
         document.getElementById('dashboard').setAttribute('class', 'dashboard active');
         document.getElementById('pemesanan').setAttribute('class', '');

@@ -9,7 +9,7 @@ table{
 td{
     width: 20vw;
     height: 20vw;
-    border: 1px solid royalblue;
+    border: 1px solid orangered;
 }
 td .content_list{
     background-color: rgb(226, 226, 226);
@@ -17,12 +17,13 @@ td .content_list{
     height: 100%;
 }
 td .content_list .header{
-    background-color: royalblue;
+    background-color: orangered;
     width: 100%;
     height: 20%;
     font-size: 2vw;
     padding-top: 4%;
     text-align: center;
+    color: white;
 }
 td .content_list p{
     font-size: 3vw;
