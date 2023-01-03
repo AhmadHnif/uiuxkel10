@@ -9,7 +9,7 @@
     <body>
         <div class="content" id="content">
             <form action="#" method="post" enctype="multipart/form-data">
-                <label for="files" id="input_gambar"><p id="masukanGambar">Masukkan Gambar<br><img id="blah"></p></label>
+                <label for="files" id="input_gambar"><p id="masukanGambar">Masukkan Gambar<img id="blah"></p></label>
                 <input type="file" id="files" name="foto_makanan" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0]);document.getElementById('blah').style.display = 'block'"><br>
                 <label for="nama"><p>Nama Makanan:</p></label>
                 <input type="text" id="nama" name="nama_makanan" maxlength="16"><br><br>
