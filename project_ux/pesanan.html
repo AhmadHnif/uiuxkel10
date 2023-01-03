@@ -12,10 +12,10 @@
             <form action="#" method="post" enctype="multipart/form-data">
 
                 <!-- new add image button -->
-                <div class="input_gambar">
-                    <div id="imagePreview" src="http://via.placeholder.com/350x150" alt="placeholder image goes here"></div>
-                    <input id="uploadFile" type="file" name="image" class="img" />
-                </div>
+                <input type="file" id="file1">
+<label for="file1">
+    <img src="https://cdn3.iconfinder.com/data/icons/iconic-1/32/plus_alt-256.png" class="default" alt="">
+</label>
 
                 <!-- <label for="files" id="input_gambar"><p>Masukkan Gambar</p></label> -->
 
@@ -59,26 +59,19 @@
             }
 
             // Fun for image preview in add image button
-            $(function() {
-            $("#uploadFile").on("change", function()
-            {
-                var files = !!this.files ? this.files : [];
-                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+            $('#file1').on('change', function() {
+  var files = !!this.files ? this.files : [];
+  if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
 
-                if (/^image/.test( files[0].type)){ // only image file
-                    var reader = new FileReader(); // instance of the FileReader
-                    reader.readAsDataURL(files[0]); // read the local file
+  if (/^image/.test(files[0].type)) { // only image file
+    var reader = new FileReader(); // instance of the FileReader
+    reader.readAsDataURL(files[0]); // read the local file
 
-                    reader.onloadend = function(){ // set image data as background of div
-                        $("#imagePreview").css("background-image", "url("+this.result+")");
-                    }
-                }
-            });
-        });
-
-        $('#imagePreview').click(function(){
-        $('#uploadFile').click();
-        });
+    reader.onloadend = function() { // set image data as background of div
+      $('img').attr('src', reader.result).removeClass('default')
+    }
+  }
+})
 
         </script>
     </body>

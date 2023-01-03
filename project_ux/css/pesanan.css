@@ -102,6 +102,25 @@ p{
   display: none
 }
 
+#file1 {
+    display: none;
+  }
+  
+  img {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    margin-left: 13vw;
+    margin-top: 2px;
+  }
+  
+  img.default {
+    border: 2px gray dashed;
+    padding: 50px;
+    height: 150px;
+    width: 150px;
+  }
+
 @media only screen and (max-width: 900px) {
     .content{
         width: 90%;
