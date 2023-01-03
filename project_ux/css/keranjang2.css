@@ -144,12 +144,20 @@ button[class*=btn] {
   border: none;
   cursor: pointer;
 }
+
 .minus-btn img {
   margin-bottom: 3px;
 }
 .plus-btn img {
   margin-top: 2px;
 }
+
+.plus-btn:hover{
+  background: #27FF01;
+  }
+  .minus-btn:hover{
+    background: red;
+    }
 button:focus,
 input:focus {
   outline:0;
