@@ -68,6 +68,12 @@ p{
     border: none;
     background-color: #eee;
 }
+#blah{
+    margin-left: 4vw;
+    border-radius: 0.7vw;
+    background-color: #eee;
+    width: 83%;
+}
 .submit{
     width: 80%;
     margin-left: 10%;
