@@ -37,6 +37,8 @@
         text-align:center;
         box-shadow: 2px 2px 3px #999;
         font-size: 2vw;
+        outline: .1rem solid black;
+        outline-offset: -0.5rem;
     }
 
     .my-float{
@@ -203,6 +205,11 @@
 
     .products-preview .preview .buttons a.buy:hover{
     background: #111;
+    }
+
+    .float:hover{
+        outline: .2rem solid #222;
+        outline-offset: 0;
     }
 
 
