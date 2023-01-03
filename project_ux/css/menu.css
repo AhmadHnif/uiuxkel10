@@ -48,7 +48,10 @@
         border-radius: 50%;
         background-color: rgb(202, 54, 0);
         color: white;
-      }
+    }
+    .float:hover i{
+        transform: scale(.9);
+    }
 
     .my-float{
         margin-top:20px;
