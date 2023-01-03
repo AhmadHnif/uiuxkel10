@@ -5,11 +5,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/pesanan.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="content" id="content">
             <form action="#" method="post" enctype="multipart/form-data">
-                <label for="files" id="input_gambar"><p>Masukkan Gambar</p></label>
+
+                <!-- new add image button -->
+                <div class="input_gambar">
+                    <div id="imagePreview" src="http://via.placeholder.com/350x150" alt="placeholder image goes here"></div>
+                    <input id="uploadFile" type="file" name="image" class="img" />
+                </div>
+
+                <!-- <label for="files" id="input_gambar"><p>Masukkan Gambar</p></label> -->
+
                 <input type="file" id="files" name="foto_makanan" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])"><br>
                 <label for="nama"><p>Nama Makanan:</p></label>
                 <input type="text" id="nama" name="nama_makanan" maxlength="16"><br><br>
@@ -48,6 +57,29 @@
                 rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
                 return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
             }
+
+            // Fun for image preview in add image button
+            $(function() {
+            $("#uploadFile").on("change", function()
+            {
+                var files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) return; // no file selected, or no FileReader support
+
+                if (/^image/.test( files[0].type)){ // only image file
+                    var reader = new FileReader(); // instance of the FileReader
+                    reader.readAsDataURL(files[0]); // read the local file
+
+                    reader.onloadend = function(){ // set image data as background of div
+                        $("#imagePreview").css("background-image", "url("+this.result+")");
+                    }
+                }
+            });
+        });
+
+        $('#imagePreview').click(function(){
+        $('#uploadFile').click();
+        });
+
         </script>
     </body>
 </html>
