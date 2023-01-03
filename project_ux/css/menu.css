@@ -31,7 +31,7 @@
         width:60px;
         height:60px;
         right: 40px;
-        background-color:#cc3700;
+        background-color:rgb(202, 54, 0);
         color:#FFF;
         border-radius:50px;
         text-align:center;
@@ -46,7 +46,7 @@
         right: -10px;
         padding: 6px 10px;
         border-radius: 50%;
-        background-color: #cc3700;
+        background-color: rgb(202, 54, 0);
         color: white;
       }
 
