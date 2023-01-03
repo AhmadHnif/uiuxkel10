@@ -110,13 +110,12 @@ p{
     cursor: pointer;
     width: 150px;
     height: 150px;
-    margin-left: 13vw;
+    margin-left: 18vw;
     margin-top: 2px;
   }
   
   img.default {
     border: 2px gray dashed;
-    padding: 50px;
     height: 150px;
     width: 150px;
   }
