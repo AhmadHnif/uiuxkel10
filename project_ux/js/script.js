@@ -20,3 +20,11 @@ previewBox.forEach(close =>{
     preveiwContainer.style.display = 'none';
   };
 });
+function toast(text){
+  document.getElementById('toast_text').setAttribute('style', 'display:block;width:fit-content')
+  document.getElementById('toast_text').innerText = text
+  setTimeout(cloase_toast, 1500);
+}
+function cloase_toast(){
+  document.getElementById('toast_text').style.display = 'none'
+}

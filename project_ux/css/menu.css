@@ -223,7 +223,21 @@
         outline: .2rem solid #222;
         outline-offset: 0;
     }
-
+    .toast{
+        min-width: 85%;
+        min-height: 3vw;
+        width: fit-content;
+        height: fit-content;
+        position: fixed;
+        bottom: 20%;
+    }
+    #toast_text{
+        background-color: black;
+        border-radius: 10vw;
+        color: white;
+        padding: 1%;
+        display: none;
+    }
 
     @media (max-width:991px){
 

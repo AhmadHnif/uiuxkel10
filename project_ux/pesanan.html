@@ -16,16 +16,24 @@
             <input type="text" id="harga" name="harga"><br><br>
             <label for="judul"><p>Deskripsi:</p></label>
             <textarea name="deskripsi" id="deskripsi" cols="40" rows="10"></textarea><br><br>
-            <input type="submit" class="submit" name="submit">
+            <input type="submit" class="submit" name="submit" onclick="toast('Pesanan Telah Dibuat')">
         </div>
         &ensp;&ensp;
-        <p align="center" class="pToast"><div id="toast"></div></p>
+        <p class="toast" align="center"><label id="toast_text">Test toast</label></p>
         <script>
             var dengan_rupiah = document.getElementById('harga');
             dengan_rupiah.addEventListener('keyup', function(e)
             {
                 dengan_rupiah.value = formatRupiah(this.value, 'Rp. ');
             });
+            function toast(text){
+                document.getElementById('toast_text').setAttribute('style', 'display:block;width:fit-content')
+                document.getElementById('toast_text').innerText = text
+                setTimeout(cloase_toast, 1500);
+            }
+            function cloase_toast(){
+                document.getElementById('toast_text').style.display = 'none'
+            }
             
             /* Fungsi */
             function formatRupiah(angka, prefix)
