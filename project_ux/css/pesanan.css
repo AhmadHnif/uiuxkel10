@@ -91,6 +91,20 @@ p{
     color: white;
     font-weight: bolder;
 }
+.pToast{
+    border: 1px solid black;
+}
+#toast{
+    min-width: 10%;
+    min-height: 3vw;
+    width: fit-content;
+    height: fit-content;
+    background-color: #000;
+    position: fixed;
+    bottom: 10%;
+    border-radius: 10vw;
+
+}
 @media only screen and (max-width: 900px) {
     .content{
         width: 90%;
