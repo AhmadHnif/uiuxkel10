@@ -26,6 +26,10 @@ body{
     margin-top: 5%;
     margin-left: 40%;
 }
+img, svg{
+    vertical-align: center;
+    margin-bottom: 0.5vw;
+}
 .user{
     margin-top: -3.5%;
 }
