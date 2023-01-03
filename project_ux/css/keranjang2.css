@@ -153,7 +153,7 @@ button[class*=btn] {
 }
 
 .plus-btn:hover{
-  background: green;
+  background: #3EC70B;
   }
   .minus-btn:hover{
     background: red;
