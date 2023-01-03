@@ -163,7 +163,6 @@
           btn_min[id].setAttribute("disabled", "")
         }else{
           btn_min[id].removeAttribute("disabled");
-          item[id].setAttribute('style', 'display:none')
         }
       }
       function min (id, hargaSatuan) {
@@ -173,9 +172,9 @@
         var btn_min = document.querySelectorAll('.minus-btn');
         if(totalAwal[id] < 1){
           btn_min[id].setAttribute("disabled", "")
-        }else{
-          btn_min[id].removeAttribute("disabled");
           item[id].setAttribute('style', 'display:none')
+        } else {
+          btn_min[id].removeAttribute("disabled");
         }
       }
     </script>
